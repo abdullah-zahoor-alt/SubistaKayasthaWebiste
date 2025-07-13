@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dear Teacher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Subista Kayastha</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      --heading-font: "Roboto", sans-serif;
+      --background-color: #F6F1E7;
+      --default-color: #212529;
+      --heading-color: #2d465e;
+      --accent-color: #2c2c54;
+      --surface-color: #EAD7C2;
+      --contrast-color: #ffffff;
+      --nav-color: #212529;
+      --nav-hover-color: #507290;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      color: var(--default-color);
+      background-color: var(--background-color);
+      font-family: var(--default-font);
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: color-mix(in srgb, var(--accent-color), transparent 25%);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--heading-color);
+      font-family: var(--heading-font);
+    }
+
+    .dear-teacher-page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .main-description, .section p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 40px;
+      align-items: stretch;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .wide-image {
+      width: 100%;
+      height: auto;
+      margin: 40px 0 20px;
+      display: block;
+    }
+
+    .center-image {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 60px;
+    }
+
+    .center-image img {
+      width: 60%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .center-image img {
+        width: 100%;
+      }
+    }
+
+    .php-email-form .error-message {
+      display: none;
+      color: #fff;
+      background: #e74c3c;
+      text-align: center;
+      padding: 15px;
+      font-weight: 600;
+    }
+
+    .php-email-form .sent-message {
+      display: none;
+      color: #fff;
+      background: #28a745;
+      text-align: center;
+      padding: 15px;
+      font-weight: 600;
+    }
+
+    .php-email-form .loading.active,
+    .php-email-form .error-message.active,
+    .php-email-form .sent-message.active {
+      display: block;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 177.78%;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: -40%;
+      left: 0;
+      width: 100%;
+      height: 180%;
+      border: 0;
+      object-fit: cover;
+    }
+
+    .normal-video {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+    }
+
+    .normal-video iframe {
+      width: 80%;
+      max-width: 720px;
+      height: 300px;
+      border: none;
+    }
+
+    .full-width-video {
+      width: 100%;
+      margin: 40px 0;
+    }
+
+    .full-width-video video {
+      width: 100%;
+      height: auto;
+      display: block;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+<header id="header" class="header d-flex align-items-center sticky-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center">
+      <h1 class="sitename">Subista.</h1>
+    </a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+  </div>
+</header>
+
+<div class="dear-teacher-page">
+  <div class="page-title light-background">
+    <div class="container">
+      <h1>Dear Teacher</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li class="current">Portfolio Detail</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="main-description" data-aos="fade-up" data-aos-delay="400">
+    <p>This project examines how traditional schooling in South Asia can alienate children during their formative years. The socio-spatial construct of the school depends heavily on those in power and the various objects that shape a child's experience within the school environment. While bringing attention to this alienation, the project speaks to mentors from a student's perspective, in ways they may not have heard before.</p>
+  </div>
+
+  <div class="section" data-aos="fade-up" data-aos-delay="400">
+    <h2>Concept Book / Research Paper</h2>
+    <p>You can explore the full concept book and research documentation by clicking the button below:</p>
+    <a href="assets/pdfs/thesis book__CMYK__A5_11zon.pdf" target="_blank" style="display: inline-block; background: var(--accent-color); color: white; padding: 12px 24px; border-radius: 6px; font-weight: 500; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+      View Concept Book
+    </a>
+  </div>
+
+  <div class="image-grid" data-aos="fade-up" data-aos-delay="400">
+    <img src="assets/img/11.JPG" alt="Image 1">
+    <img src="assets/img/22.JPG" alt="Image 2">
+    <img src="assets/img/33.JPG" alt="Image 3">
+  </div>
+
+  <img src="assets/img/WhatsApp Image 2025-07-13 at 21.25.11.jpeg" alt="Top Banner Image" class="wide-image" data-aos="fade-up" data-aos-delay="400"/>
+
+  <div class="section" data-aos="fade-up" data-aos-delay="400">
+    <h2>You Are The Authority!</h2>
+    <p>This work is a representation of a metaphorical classroom. When you walk through the door, everything goes quiet because now you are the authority.
+There’s a giant notebook with floating pencils. When you touch them, they start to move, like they’re writing by themselves. Then there’s a big blackboard where you can write anything you want.
+This piece is about power, learning, how it feels to be in charge, and what it feels like to be in control and see the struggles of the one without power and control. It asks: As an authority, what would you do differently?</p>
+  </div>
+
+  <div class="image-grid" data-aos="fade-up" data-aos-delay="400">
+    <img src="assets/img/dtsec22.JPG" alt="Image">
+    <img src="assets/img/dtsec23.jpeg" alt="Image">
+    <img src="assets/img/covermaindt.jpeg" alt="Cover">
+  </div>
+
+  <div class="image-grid" data-aos="fade-up" data-aos-delay="400">
+    <img src="assets/img/IMG_6022.JPG" alt="Left Image">
+    <div class="video-wrapper">
+      <iframe src="assets/vedios/dearteachervedio.mp4" title="Authority Video" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <img src="assets/img/IMG_5951.JPG" alt="Right Image">
+  </div>
+
+  <div class="section" data-aos="fade-up" data-aos-delay="400">
+    <h2>Digitol City</h2>
+    <p>This project is part of a larger initiative titled Dear Teacher. It acts as both a data collection and data visualization platform, where people submit letters to their teachers. It is a digital city that keeps growing with every letter someone writes to a teacher. When a person shares their thoughts or feelings through the portal, a drawing appears on the screen. These drawings were made by real kids during one of my workshops.
+
+The idea is to show what students really feel about school and teachers, especially the things they might not usually get to say. Each letter adds a new piece to the city, turning words and emotions into something you can actually see.
+
+It is a mix of art, storytelling, and technology. In the end, the city becomes a space full of voices, memories, and feelings that quietly tap on the windows of those in power, asking them to look inside.</p>
+    <div class="full-width-video" data-aos="fade-up" data-aos-delay="400">
+      <video controls>
+        <source src="assets/vedios/WhatsApp Video 2025-07-13 at 21.31.09.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+
+<script src="assets/vendor/aos/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
+
+<footer id="footer" class="footer light-background">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
+        <div class="widget">
+          <h3 class="widget-heading">Location</h3>
+          <p>Kathmandu, Nepal</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 pl-lg-5">
+        <div class="widget">
+          <h3 class="widget-heading">Email</h3>
+          <p>kayasthasubista037@gmail.com</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 pl-lg-5">
+        <div class="widget">
+          <h3 class="widget-heading">Connect</h3>
+          <ul class="list-unstyled social-icons light mb-3">
+            <li><a href="https://www.facebook.com/subista.kayastha"><span class="bi bi-facebook"></span></a></li>
+            <li><a href="https://www.instagram.com/subista_kayastha/"><span class="bi bi-instagram"></span></a></li>
+            <li><a href="https://www.linkedin.com/in/subista-kayastha-b42956324/"><span class="bi bi-linkedin"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Subista Kayastha</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by Abdullah Zahoor
+      </div>
+    </div>
+  </div>
+</footer>
+ 
+</body>
+</html>
